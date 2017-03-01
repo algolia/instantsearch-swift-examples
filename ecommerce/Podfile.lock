@@ -15,21 +15,30 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AlgoliaSearch-Client-Swift (4.6.1)
+  - Bond (6.0.0):
+    - Diff (~> 0.4)
+    - ReactiveKit (~> 3.3)
+  - Diff (0.5.0)
   - Eureka (2.0.0-beta.1)
   - InstantSearch-Core-Swift (1.0):
     - AlgoliaSearch-Client-Swift (~> 4.0)
+  - ReactiveKit (3.3.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Bond (~> 6.0)
   - Eureka (~> 2.0.0-beta.1)
   - InstantSearch-Core-Swift (~> 1.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AlgoliaSearch-Client-Swift: cd88a599e43b753874001a7d40eeb3999f137f5f
+  Bond: d34e0c37e829c991d3ef80aa860f647d677e7801
+  Diff: eceb93a3adf508574ba9b8560da185ace83de055
   Eureka: d014adf16406745e1a78d5790ea37ed130a0a8e5
   InstantSearch-Core-Swift: 7fcdf313c2d8f2fea9edc975319a7b4626e50e53
+  ReactiveKit: 56a5b949847ba137da40045149785e569f292e07
 
-PODFILE CHECKSUM: 13491f0bd5e0877495e851901ff404fdda46743f
+PODFILE CHECKSUM: d414e2a0a9986112d84d2f4cc85c4c12d8ddf928
 
 COCOAPODS: 1.2.0

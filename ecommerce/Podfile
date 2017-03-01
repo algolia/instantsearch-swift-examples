@@ -7,6 +7,7 @@ target 'ecommerce' do
   pod 'InstantSearch-Core-Swift', '~> 1.0'
   pod 'AFNetworking', '~> 3.0'
   pod 'Eureka', '~> 2.0.0-beta.1'
+  pod 'Bond', '~> 6.0'
 
   # Pods for ecommerce
 
