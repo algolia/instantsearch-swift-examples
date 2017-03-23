@@ -12,7 +12,7 @@ class ViewController: UIViewController
         super.viewDidLoad()
         
 //        hitsTable.hitDataSource = self
-//        instantSearchBinder = InstantSearchBinder(searcher: AlgoliaSearchManager.instance.searcher, view: self.view)
+//        instantSearchBinder = InstantSearchBinder(searcher: SearcherBuilder.createSearcher(), view: self.view)
     }
     
 //    func cellFor(hit: [String : Any], at indexPath: IndexPath) -> UITableViewCell {
