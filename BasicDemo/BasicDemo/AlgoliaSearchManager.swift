@@ -1,13 +1,3 @@
-//
-//  AlgoliaSearchManager.swift
-//  BasicDemo
-//
-//  Created by Guy Daher on 22/03/2017.
-//  Copyright © 2017 Guy Daher. All rights reserved.
-//
-
-import Foundation
-
 import Foundation
 import InstantSearchCore
 import AlgoliaSearch
