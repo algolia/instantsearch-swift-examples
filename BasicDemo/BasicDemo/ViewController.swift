@@ -2,7 +2,7 @@ import UIKit
 import InstantSearchCore
 
 class ViewController: UIViewController
-//                    ,HitDataSource
+                    , HitDataSource
 {
     
     var instantSearchBinder: InstantSearchBinder!
@@ -11,23 +11,23 @@ class ViewController: UIViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        hitsTable.hitDataSource = self
-//        instantSearchBinder = InstantSearchBinder(searcher: SearcherBuilder.createSearcher(), view: self.view)
+        hitsTable.hitDataSource = self
+        instantSearchBinder = InstantSearchBinder(searcher: SearcherBuilder.createSearcher(), view: self.view)
     }
     
-//    func cellFor(hit: [String : Any], at indexPath: IndexPath) -> UITableViewCell {
-//        let cell = hitsTable.dequeueReusableCell(withIdentifier: "hitCell", for: indexPath)
-//        
-//        cell.textLabel?.text = hit["name"] as? String
-//        
-//        cell.textLabel?.highlightedText = SearchResults.highlightResult(hit: hit, path: "name")?.value
-//        cell.textLabel?.highlightedTextColor = .black
-//        cell.textLabel?.highlightedBackgroundColor = .yellow
-//        
-//        cell.detailTextLabel?.text = String(hit["salePrice"] as! Double)
-//        
-//        return cell
-//    }
+    func cellFor(hit: [String : Any], at indexPath: IndexPath) -> UITableViewCell {
+        let cell = hitsTable.dequeueReusableCell(withIdentifier: "hitCell", for: indexPath)
+        
+        cell.textLabel?.text = hit["name"] as? String
+        
+        cell.textLabel?.highlightedText = SearchResults.highlightResult(hit: hit, path: "name")?.value
+        cell.textLabel?.highlightedTextColor = .black
+        cell.textLabel?.highlightedBackgroundColor = .yellow
+        
+        cell.detailTextLabel?.text = String(hit["salePrice"] as! Double)
+        
+        return cell
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let facetController = segue.destination as! FacetController
