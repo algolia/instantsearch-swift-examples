@@ -20,7 +20,7 @@ class ViewController: HitsTableViewController {
         
         hitsTableView = tableView
         
-        InstantSearch.reference.addAllWidgets(in: self.view)
+        InstantSearch.shared.registerAllWidgets(in: self.view)
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath, containing hit: [String : Any]) -> UITableViewCell {

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E23839BD1EEFF00C00016055 /* RefinementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23839BC1EEFF00C00016055 /* RefinementViewController.swift */; };
 		E258C9091EE036830076097D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258C9081EE036830076097D /* AppDelegate.swift */; };
 		E258C90B1EE036830076097D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E258C90A1EE036830076097D /* ViewController.swift */; };
 		E258C90E1EE036830076097D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E258C90C1EE036830076097D /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 		446E7A389BD6D7E4767FA9BE /* Pods_Getting_Started_Storyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Getting_Started_Storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C28F31B0770B3124FD360D87 /* Pods-Getting Started Storyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getting Started Storyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Getting Started Storyboard/Pods-Getting Started Storyboard.release.xcconfig"; sourceTree = "<group>"; };
 		D891F5A77C138C01A5CC701E /* Pods-Getting Started Storyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Getting Started Storyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Getting Started Storyboard/Pods-Getting Started Storyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		E23839BC1EEFF00C00016055 /* RefinementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefinementViewController.swift; sourceTree = "<group>"; };
 		E258C9051EE036830076097D /* Getting Started Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Getting Started Storyboard.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E258C9081EE036830076097D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E258C90A1EE036830076097D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				E258C9081EE036830076097D /* AppDelegate.swift */,
 				E258C90A1EE036830076097D /* ViewController.swift */,
 				E258C90C1EE036830076097D /* Main.storyboard */,
+				E23839BC1EEFF00C00016055 /* RefinementViewController.swift */,
 				E258C90F1EE036830076097D /* Assets.xcassets */,
 				E258C9111EE036830076097D /* LaunchScreen.storyboard */,
 				E258C9141EE036830076097D /* Info.plist */,
@@ -213,6 +216,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E258C90B1EE036830076097D /* ViewController.swift in Sources */,
+				E23839BD1EEFF00C00016055 /* RefinementViewController.swift in Sources */,
 				E258C9091EE036830076097D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,6 +383,7 @@
 				E258C9191EE036830076097D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
