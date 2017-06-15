@@ -15,42 +15,29 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - AlgoliaSearch-Client-Swift (4.8.1)
-  - Eureka (2.0.1)
   - InstantSearch-Core-Swift (2.0.0-beta1):
     - AlgoliaSearch-Client-Swift (~> 4.0)
-  - InstantSearch-Swift (1.0.0-beta1):
-    - InstantSearch-Swift/InstantSearch-Swift (= 1.0.0-beta1)
-  - InstantSearch-Swift/CustomWidgets (1.0.0-beta1):
-    - InstantSearch-Core-Swift (~> 2.0.0-beta1)
-  - InstantSearch-Swift/InstantSearch-Swift (1.0.0-beta1):
+  - InstantSearch-Swift (1.0.0-beta3):
+    - InstantSearch-Swift/InstantSearch-Swift (= 1.0.0-beta3)
+  - InstantSearch-Swift/InstantSearch-Swift (1.0.0-beta3):
     - InstantSearch-Core-Swift (~> 2.0.0-beta1)
   - Nimble (6.1.0)
   - Quick (1.1.0)
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
-  - Eureka (~> 2.0.0-beta.1)
-  - InstantSearch-Core-Swift (from `../../instantsearch-core-swift`)
-  - InstantSearch-Swift (from `/Users/guydaher/Developer/Algolia/iOS/instantsearch-ios`)
-  - InstantSearch-Swift/CustomWidgets (from `/Users/guydaher/Developer/Algolia/iOS/instantsearch-ios`)
+  - InstantSearch-Swift (~> 1.0.0-beta3)
   - Nimble
   - Quick
-
-EXTERNAL SOURCES:
-  InstantSearch-Core-Swift:
-    :path: ../../instantsearch-core-swift
-  InstantSearch-Swift:
-    :path: /Users/guydaher/Developer/Algolia/iOS/instantsearch-ios
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   AlgoliaSearch-Client-Swift: 5bdfbc8727f203773245e2410edd7a9c8e831637
-  Eureka: ae837bb1dfae0c07bc1bda7aeef87876eeb537c2
-  InstantSearch-Core-Swift: 61afeb3c5933b5d208fe9852fee68edef9663d29
-  InstantSearch-Swift: 37abb28063ddf43fe879477bec6e7a49e6cb73d5
+  InstantSearch-Core-Swift: 39baf4378e48028ce3f7137cfc3067ad80e7b732
+  InstantSearch-Swift: e7d9d88cf140affd5686fd7d757c9a52995d6ca8
   Nimble: c53e6903fee94041b90ded74f135820437d8bf59
   Quick: dafc587e21eed9f4cab3249b9f9015b0b7a7f71d
 
-PODFILE CHECKSUM: 73f0e344b93acc6fb00b5e20db024b134ddf2c2c
+PODFILE CHECKSUM: 711f90e03b380c037097ca05ffbd7cae82821708
 
 COCOAPODS: 1.2.0

@@ -21,7 +21,6 @@
 		E219FAE01E49F982006D9CFC /* TopBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FADF1E49F982006D9CFC /* TopBarView.swift */; };
 		E219FAE21E4A1E16006D9CFC /* FacetTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FAE11E4A1E16006D9CFC /* FacetTableViewController.swift */; };
 		E219FB041E534AF8006D9CFC /* FacetCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FB031E534AF8006D9CFC /* FacetCategoryCell.swift */; };
-		E219FB411E54B555006D9CFC /* FilterEurekaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FB401E54B555006D9CFC /* FilterEurekaViewController.swift */; };
 		E219FB441E56F4C9006D9CFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E219FB431E56F4C9006D9CFC /* Constants.swift */; };
 		E22B900A1E5EF17B00059F95 /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22B90091E5EF17B00059F95 /* FilterCell.swift */; };
 		E25104D51E5EF9AF00F3B18C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E25104D41E5EF9AF00F3B18C /* FilterViewController.swift */; };
@@ -73,7 +72,6 @@
 		E219FADF1E49F982006D9CFC /* TopBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopBarView.swift; sourceTree = "<group>"; };
 		E219FAE11E4A1E16006D9CFC /* FacetTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacetTableViewController.swift; sourceTree = "<group>"; };
 		E219FB031E534AF8006D9CFC /* FacetCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacetCategoryCell.swift; sourceTree = "<group>"; };
-		E219FB401E54B555006D9CFC /* FilterEurekaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterEurekaViewController.swift; sourceTree = "<group>"; };
 		E219FB431E56F4C9006D9CFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E22B90091E5EF17B00059F95 /* FilterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
 		E25104D41E5EF9AF00F3B18C /* FilterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
@@ -199,7 +197,6 @@
 			children = (
 				E219FAA31E4382B2006D9CFC /* ItemTableViewController.swift */,
 				E219FAE11E4A1E16006D9CFC /* FacetTableViewController.swift */,
-				E219FB401E54B555006D9CFC /* FilterEurekaViewController.swift */,
 				E25104D41E5EF9AF00F3B18C /* FilterViewController.swift */,
 			);
 			name = Controllers;
@@ -518,7 +515,6 @@
 				E22B900A1E5EF17B00059F95 /* FilterCell.swift in Sources */,
 				E219FAA41E4382B2006D9CFC /* ItemTableViewController.swift in Sources */,
 				E219FADC1E4880ED006D9CFC /* Helpers.swift in Sources */,
-				E219FB411E54B555006D9CFC /* FilterEurekaViewController.swift in Sources */,
 				E219FB041E534AF8006D9CFC /* FacetCategoryCell.swift in Sources */,
 				E219FB441E56F4C9006D9CFC /* Constants.swift in Sources */,
 				E219FAA21E4382B2006D9CFC /* AppDelegate.swift in Sources */,

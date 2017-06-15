@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F71b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bB7-xE-IpO">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.17" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="bB7-xE-IpO">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.14"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -124,7 +124,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="|" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ahZ-Ot-SQI">
-                                        <rect key="frame" x="296" y="7" width="7" height="36"/>
+                                        <rect key="frame" x="292.5" y="7" width="10.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -140,7 +140,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="txO-NW-9ag">
-                                        <rect key="frame" x="221" y="8.5" width="39" height="33"/>
+                                        <rect key="frame" x="217.5" y="8.5" width="39" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title="Filter">
                                             <color key="titleColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -150,7 +150,7 @@
                                         </connections>
                                     </button>
                                     <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_down_flat" translatesAutoresizingMaskIntoConstraints="NO" id="mKK-uB-P5u">
-                                        <rect key="frame" x="263" y="12.5" width="25" height="25"/>
+                                        <rect key="frame" x="259.5" y="12.5" width="25" height="25"/>
                                     </imageView>
                                     <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="P0S-Ip-Uxj" customClass="ActivityIndicatorView" customModule="InstantSearch">
                                         <rect key="frame" x="8" y="8" width="20" height="2"/>
@@ -204,7 +204,6 @@
                         <outlet property="searchBarView" destination="2C1-MB-EIr" id="gDL-xq-RuS"/>
                         <outlet property="tableView" destination="Ro2-2Z-Loj" id="Xet-PJ-uWn"/>
                         <outlet property="topBarView" destination="YAA-Ez-PoB" id="5e8-4t-ccn"/>
-                        <segue destination="80H-py-BPS" kind="presentation" identifier="FilterEurekaSegue" id="2cK-bZ-z1L"/>
                         <segue destination="LbJ-CV-7dl" kind="presentation" identifier="FilterSegue" id="oOB-c1-ePu"/>
                     </connections>
                 </viewController>
@@ -215,7 +214,7 @@
         <!--Filters-->
         <scene sceneID="Zpc-9m-zXb">
             <objects>
-                <viewController id="Qi6-95-g1T" customClass="FilterEurekaViewController" customModule="ecommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Qi6-95-g1T" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7qO-n7-gIB"/>
                         <viewControllerLayoutGuide type="bottom" id="WQ7-Ld-Uoc"/>
@@ -232,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8UI-px-4dF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1681" y="773"/>
+            <point key="canvasLocation" x="-1663" y="795"/>
         </scene>
         <!--Filter View Controller-->
         <scene sceneID="cv9-so-VyE">
@@ -423,24 +422,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U6U-6Z-fDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2922" y="9"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="3hz-4h-0v8">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="80H-py-BPS" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eJE-vF-bGP">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Qi6-95-g1T" kind="relationship" relationship="rootViewController" id="5Ih-DD-Hfu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Qaa-DY-QqS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-2663" y="774"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rMu-yP-oBy">
