@@ -64,6 +64,9 @@ extension UISearchBar {
   }
 }
 
+// Idea: Add a decorator for UISearchBar that is going to implement a delegate and proxy it
+// The decorator should be an extension / subclass of Box
+
 extension Box where A: UISearchBar {
   
   
