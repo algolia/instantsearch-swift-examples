@@ -1,0 +1,292 @@
+@import "../../components/colors";
+@import "../../components/default";
+@import "../../components/header-custom";
+@import "../../components/sidebar";
+@import "../../vendors/base";
+
+////////////////////////////////
+// Constants
+////////////////////////////////
+$bg_color: #414141;
+$doc_coverage_color: #999;
+$code_color: #777;
+$code_bg_color: #eee;
+$link_color: #0088cc;
+$white_color: #fff;
+$light_gray_bg_color: #f2f2f2;
+$declaration_bg_color: #f9f9f9;
+$declaration_title_language_color: #4b8afb;
+$content_wrapper_width: 980px;
+$content_top_offset: 70px;
+$content_body_margin: 16px;
+$content_body_left_offset: $sidebar_width + $content_body_margin;
+$breadcrumb_padding_top: 17px;
+$code_font: 0.95em Menlo, monospace;
+$gray_border: 1px solid #e2e2e2;
+$declaration_language_border: 5px solid #cde9f4;
+$aside_color: #aaa;
+$aside_border: 5px solid lighten($aside_color, 20%);
+$aside_warning_color: $brand-danger;
+$aside_warning_border: 5px solid $brand-danger;
+
+.section-name {
+    color: #808080;
+    font-size: 16pt;
+    font-weight: normal;
+    margin-top: 1em;
+}
+
+// ----------------------------------------------------------------------
+// Side bar
+// ----------------------------------------------------------------------
+
+.sidebar {
+    ul {
+        padding: 0;
+        padding-left: 12pt;
+        margin: 0;
+    }
+    .nav-groups {
+        list-style-type: none;
+        background: $white_color;
+        padding-left: 0;
+    }
+    .nav-group-name {
+        border-bottom: $gray_border;
+        font-size: 12pt;
+        font-weight: bold;
+        padding: 15px 0 15px 20px;
+        > a {
+            color: #333;
+        }
+    }
+    .nav-group-tasks {
+        margin-top: 5px;
+    }
+    .nav-group-task {
+        font-size: 12pt;
+        font-weight: normal;
+        list-style-type: none;
+        white-space: nowrap;
+        a {
+            color: #888;
+        }
+    }
+}
+
+////////////////////////////////
+// Main Content
+////////////////////////////////
+$color-main-text-fg: #4A4A4C;
+.main-content {
+    background-color: $white_color;
+    color: $color-main-text-fg;
+    // margin-left: $content_body_left_offset;
+    //position: absolute;
+    overflow: hidden;
+    // padding-bottom: 60px;
+    // top: $content_top_offset;
+    // width: $content_wrapper_width - $content_body_left_offset;
+    a,
+    blockquote,
+    code,
+    em,
+    p,
+    table,
+    ul {
+        margin-top: 0.5em;
+        margin-bottom: 0.5em;
+    }
+    p {
+        line-height: 1.8em;
+    }
+    // Inline code.
+    code {
+        background-color: $secondary-color;
+        border: solid 1px #E0E0E0;
+        border-radius: 3px;
+        color: $primary-color;
+        margin: 0 0.1em;
+        padding: 0.1em 0.2em 0.05em 0.2em;
+    }
+    // Cancel the previous rule for block code.
+    pre, h1, h2, h3, h4, h5, h6, .task-group {
+        code {
+            background-color: inherit;
+            border: none;
+            color: inherit;
+            margin: 0;
+            padding: 0;
+        }
+    }
+    section {
+        .section:first-child {
+            margin-top: 0;
+            padding-top: 0;
+        }
+        .task-group-section .task-group:first-of-type {
+            padding-top: 10px;
+            .section-name {
+                padding-top: 15px;
+            }
+        }
+    }
+    .section {
+        padding: 0 25px;
+    }
+    pre {
+        background-color: $code_bg_color;
+        padding: 10px 12px;
+        border: $gray_border;
+        border-radius: 4px;
+        overflow-x: auto;
+    }
+    .declaration .highlight {
+        overflow-x: initial; // This allows the scrollbar to show up inside declarations
+        padding: 0 40px 40px 0;
+        margin-bottom: -25px;
+        background-color: transparent;
+        border: none;
+    }
+    .section-name {
+        margin: 0 0 0 18px;
+    }
+    .task-group-section {
+        padding-left: 6px;
+        border-top: $gray_border;
+    }
+    .task-group {
+        padding-top: 0;
+    }
+    .task-name-container {
+        margin-top: 18pt;
+        a[name] {
+            &:before {
+                content: "";
+                display: block;
+            }
+        }
+    }
+    .item {
+        padding-top: 6pt;
+        width: 100%;
+        list-style-type: none;
+        a[name] {
+            &:before {
+                content: "";
+                display: block;
+                padding-top: $content_top_offset;
+                margin: -$content_top_offset 0 0;
+            }
+        }
+        code {
+            background-color: transparent;
+            padding: 0;
+        }
+        .token {
+            padding-left: 3px;
+            margin-left: 15px;
+            font-size: 11pt;
+        }
+        .declaration-note {
+            font-size: 0.85em;
+            color: rgba(128,128,128,1);
+            font-style: italic;
+        }
+    }
+    .pointer-container {
+        left: -23px;
+        padding-bottom: 13px;
+        position: relative;
+        width: 110%;
+    }
+    .pointer {
+        background: $declaration_bg_color;
+        border-left: $gray_border;
+        border-top: $gray_border;
+        height: 12px;
+        left: 21px;
+        top: -7px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+        position: absolute;
+        width: 12px;
+    }
+    .height-container {
+        display: none;
+        left: -25px;
+        padding: 0 25px;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        .section {
+            background: $declaration_bg_color;
+            border-left: $gray_border;
+            border-right: $gray_border;
+            border-bottom: $gray_border;
+            border-top: $gray_border;
+            left: -25px;
+            position: relative;
+            //width: 100%;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
+    }
+    .aside,
+    .language {
+        padding: 6px 12px;
+        margin: 12px 0;
+        border-left: $aside_border;
+        overflow-y: hidden;
+        .aside-title {
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding-bottom: 0;
+            margin: 0;
+            color: $aside_color;
+            -webkit-user-select: none;
+        }
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .language {
+        border-left: $declaration_language_border;
+        .aside-title {
+            color: $declaration_title_language_color;
+        }
+    }
+    .aside-warning {
+        border-left: $aside_warning_border;
+        .aside-title {
+            color: $aside_warning_color;
+        }
+    }
+    .graybox {
+        border-collapse: collapse;
+        width: 100%;
+        p {
+            margin: 0;
+            word-break: break-word;
+            min-width: 50px;
+        }
+        td {
+            border: $gray_border;
+            padding: 5px 25px 5px 10px;
+            vertical-align: middle;
+        }
+        tr td:first-of-type {
+            text-align: right;
+            padding: 7px;
+            vertical-align: top;
+            word-break: normal;
+            width: 40px;
+        }
+    }
+    .slightly-smaller {
+        font-size: 0.9em;
+    }
+}

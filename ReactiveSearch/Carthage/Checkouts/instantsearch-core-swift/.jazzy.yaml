@@ -1,0 +1,47 @@
+# The Xcode project is not standalone: we need the Cocoapods-generated workspace to draw dependencies.
+xcodebuild_arguments:
+    - -scheme
+    - InstantSearchCore-iOS
+output: doc/build/reference
+# Avoid putting the DocSet within the HTML docs.
+# WARNING: The path is relative to the output directory.
+docset_path: ../../../build/docset
+hide_documentation_coverage: true
+clean: true
+abstract:
+    - LICENSE
+readme: doc/jazzy/index.md
+custom_categories:
+    - name: Searching
+      children:
+        - Searcher
+        - SearchParameters
+        - FacetRefinement
+        - NumericRefinement
+        - SearchResults
+        - HighlightResult
+        - SnippetResult
+        - RankingInfo
+        - FacetStats
+        - FacetValue
+
+    - name: Request strategy
+      children:
+        - RequestStrategy
+        - AdaptiveNetworkStrategy
+        - ResponseTimeStats
+ 
+   - name: History management
+      children:
+        - History
+        - HistoryRecorder
+        - HistorySearchOptions
+        - HistoryHit
+        - LocalHistory
+
+    - name: Utilities
+      children:
+        - Highlighter
+        - Debouncer
+        - Throttler
+        - SearchProgressController

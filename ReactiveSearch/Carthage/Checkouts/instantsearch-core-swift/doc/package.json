@@ -1,0 +1,25 @@
+{
+    "name": "instantsearch-core-swift-doc",
+    "private": true,
+    "dependencies": {
+        "babel-runtime": "^6.11.6",
+        "gh-pages": "^0.11.0",
+        "handlebars": "^4.0.5",
+        "metalsmith": "^2.1.0",
+        "metalsmith-headings-identifier": "0.0.11",
+        "metalsmith-imagemin": "^2.0.0",
+        "metalsmith-layouts": "^1.6.5",
+        "metalsmith-mapsite": "^1.0.4",
+        "metalsmith-markdown": "^0.2.1",
+        "metalsmith-metallic": "^1.0.0",
+        "metalsmith-paths": "^3.0.1",
+        "metalsmith-register-helpers": "^0.1.2",
+        "metalsmith-rootpath": "^0.1.7",
+        "metalsmith-sass": "^1.3.0",
+        "metalsmith-serve": "0.0.7",
+        "metalsmith-static": "0.0.5",
+        "metalsmith-watch": "^1.0.2",
+        "mustache": "^2.3.0"
+    },
+    "devDependencies": {}
+}

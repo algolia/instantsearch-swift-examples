@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SearchHeaderView" customModule="ReactiveSearch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 products found" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4a-QN-HBt">
+                    <rect key="frame" x="16" y="15" width="125" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nuB-jq-zQ4">
+                    <rect key="frame" x="317" y="10" width="42" height="32"/>
+                    <state key="normal" title="Filters"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="M4a-QN-HBt" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="AB5-ol-NoB"/>
+                <constraint firstItem="M4a-QN-HBt" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Cz9-2Y-7di"/>
+                <constraint firstItem="nuB-jq-zQ4" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="Zif-KE-MN1"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="M4a-QN-HBt" secondAttribute="bottom" constant="14" id="bl1-Pz-Wjx"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="nuB-jq-zQ4" secondAttribute="bottom" constant="10" id="c7M-Cz-ELy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="nuB-jq-zQ4" secondAttribute="trailing" constant="16" id="fEQ-7e-YwD"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="filtersButton" destination="nuB-jq-zQ4" id="I9i-Ug-8RB"/>
+                <outlet property="productsCountLabel" destination="M4a-QN-HBt" id="VYv-DZ-nv1"/>
+            </connections>
+            <point key="canvasLocation" x="-87.5" y="-359"/>
+        </view>
+    </objects>
+</document>

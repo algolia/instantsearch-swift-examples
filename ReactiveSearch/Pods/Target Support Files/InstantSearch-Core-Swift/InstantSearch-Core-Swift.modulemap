@@ -1,0 +1,6 @@
+framework module InstantSearchCore {
+  umbrella header "InstantSearch-Core-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

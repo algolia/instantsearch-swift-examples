@@ -1,0 +1,36 @@
+PODS:
+  - AlgoliaSearch-Client-Swift (5.1.6)
+  - Cosmos (15.0.0)
+  - InstantSearch-Core-Swift (3.2.1):
+    - AlgoliaSearch-Client-Swift (~> 5.0)
+  - InstantSearch-iOS (2.1.1):
+    - InstantSearch-Core-Swift (~> 3.2)
+  - Nuke (6.1)
+  - RxCocoa (4.1.2):
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.2)
+
+DEPENDENCIES:
+  - Cosmos (~> 15.0.0)
+  - InstantSearch-Core-Swift (from `/Users/robertmogos/Dev/instantsearch-core-swift`)
+  - InstantSearch-iOS (~> 2.1.0)
+  - Nuke (~> 6.1.0)
+  - RxCocoa (~> 4.0)
+  - RxSwift (~> 4.0)
+
+EXTERNAL SOURCES:
+  InstantSearch-Core-Swift:
+    :path: /Users/robertmogos/Dev/instantsearch-core-swift
+
+SPEC CHECKSUMS:
+  AlgoliaSearch-Client-Swift: cd60a80007f00923b37a14ff03af96889083111d
+  Cosmos: a6dbd3d0baa0cc8f51f8598f7508d5a09d0a9ade
+  InstantSearch-Core-Swift: 4609fd40d57e13b476454b4d4dbeed31e9ed3d8e
+  InstantSearch-iOS: 369db77e423c53b4fa8ef1dfac9c6e8755538b4b
+  Nuke: 0513c8d156bd9a2adb15db70622c3527f44542c5
+  RxCocoa: d88ba0f1f6abf040011a9eb4b539324fc426843a
+  RxSwift: e49536837d9901277638493ea537394d4b55f570
+
+PODFILE CHECKSUM: ad1ddd9bfb77540d38aee40705711a4f2b93f181
+
+COCOAPODS: 1.3.1

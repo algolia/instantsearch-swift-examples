@@ -1,0 +1,6 @@
+framework module InstantSearch {
+  umbrella header "InstantSearch-iOS-umbrella.h"
+
+  export *
+  module * { export * }
+}

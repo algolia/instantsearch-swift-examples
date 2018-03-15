@@ -1,0 +1,65 @@
+$sidebar-bg-color: #f9f9f9;
+$gray-border: 1px solid #e2e2e2;
+$sidebar_width: 230px;
+
+.main-content {
+    min-height: 700px; // to avoid the footer to be too close to the top if the content is very short
+    // TODO: Use variables.
+    padding-left: 50px;
+    padding-right: 50px;
+    @media (min-width: 960px) {
+        padding-left: 250px;
+    }
+}
+
+.sidebar {
+    background-color: $sidebar-bg-color;
+    border: $gray-border;
+    overflow-y: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: $header-height;
+    bottom: 0;
+    left: 0;
+    width: $sidebar_width;
+    word-wrap: normal;
+    // Visible by default, hidden on narrow screens.
+    display: block;
+    @media (max-width: 960px) {
+        display: none;
+    }
+    ul {
+        li {
+            list-style-type: none;
+            font-size: 12pt;
+            white-space: nowrap;
+            margin-bottom: 0.3em;
+            a {
+                color: #888;
+            }
+        }
+    }
+}
+
+.sidebar-toggle {
+    position: fixed;
+    right: 12pt;
+    top: $header-height + 12pt;
+    padding: 1pt 5pt 3pt 5pt;
+    border-radius: 5pt;
+    font-size: 16pt;
+    // Hidden by default, visible on narrow screens.
+    display: none;
+    @media (max-width: 960px) {
+        display: block;
+    }
+    color: white;
+    background-color: #E0E0E0;
+    &:hover, &:active {
+        background-color: $red-pink;
+    }
+    transition-property: "background-color";
+    transition-duration: 300ms;
+    box-shadow: 2px 2px 3px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}

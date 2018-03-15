@@ -1,0 +1,22 @@
+@import "../vendors/base";
+
+// NOTE: Warning header not used, but kept in case it's needed again in the future.
+
+$warning-header-height: 30px;
+
+.warning-header {
+    position: fixed;
+    z-index: 1;
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: $warning-header-height;
+    background-color: $red-pink;
+    color: white;
+    text-align: center;
+    line-height: $warning-header-height;
+}
+
+$nav-height: 50px;
+$header-height: $nav-height;

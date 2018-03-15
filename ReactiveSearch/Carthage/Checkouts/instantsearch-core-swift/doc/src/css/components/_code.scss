@@ -1,0 +1,29 @@
+@import "colors";
+@import "syntax";
+
+// Inline code.
+code {
+    background-color: $secondary-color;
+    border: solid 1px #E0E0E0;
+    border-radius: 3px;
+    color: $primary-color;
+    margin: 0 0.1em;
+    padding: 0.1em 0.2em 0.05em 0.2em;
+}
+// Cancel the previous rule for block code.
+pre, h1, h2, h3, h4, h5, h6, .task-group {
+    code {
+        background-color: inherit;
+        border: none;
+        color: inherit;
+        margin: 0;
+        padding: 0;
+    }
+}
+pre {
+    background-color: $gray-lighter;
+    padding: 10px 12px;
+    border: $gray;
+    border-radius: 4px;
+    overflow-x: auto;
+}

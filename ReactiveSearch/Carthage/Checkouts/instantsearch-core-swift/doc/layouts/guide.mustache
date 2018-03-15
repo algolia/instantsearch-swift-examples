@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>{{title}} &mdash; {{module_name}}</title>
+
+    {{> head}}
+</head>
+
+<body class="index">
+
+    {{> body-header}}
+    {{> body-nav-guide}}
+
+    <div class="container">
+        {{> body-sidebar-guide}}
+
+        <article class="main-content">
+            {{{ contents }}}
+        </article>
+    </div>
+
+    {{> body-footer}}
+
+</body>
+
+{{> scripts}}
+
+</html>

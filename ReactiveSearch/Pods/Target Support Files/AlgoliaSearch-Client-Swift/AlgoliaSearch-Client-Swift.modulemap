@@ -1,0 +1,6 @@
+framework module AlgoliaSearch {
+  umbrella header "AlgoliaSearch-Client-Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}

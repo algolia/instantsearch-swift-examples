@@ -1,0 +1,65 @@
+// ----------------------------------------------------------------------
+// Home page
+// ----------------------------------------------------------------------
+
+$color-main-dark: #ED5038;
+$color-main-light: #F89C1D;
+
+.headline {
+    min-height: 200px;
+    background-color: $color-main-dark;
+    background-image: linear-gradient(140deg, $color-main-light 10%, $color-main-dark 90%);
+    color: white;
+    padding: 12pt 24pt;
+    h1 {
+        font-size: 36pt;
+        text-shadow: 0em 0em 0.2em rgba(0, 0, 0, 0.2);
+        small {
+            color: mix(white, $color-main-light, 70%);
+            font-size: 70%;
+        }
+    }
+    position: relative; // establish context for `:after` pseudo-element
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        right: 12pt;
+        top: 24pt;
+        width: 100pt;
+        height: 100pt;
+        background-image: url(../images/algolia-mark-white.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;;
+        opacity: 0.3;
+    }
+}
+
+.homepage {
+    font-size: 14pt;
+    h2 {
+        font-size: 24pt;
+        &:not(:first-child) {
+            margin-top: 2em;
+        }
+        margin-bottom: 1.5em;
+        position: relative;
+        text-align: center;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background-color: $color-main-dark;
+            top: calc(100% + 6pt);
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    .main-content {
+        padding: 12pt;
+    }
+}

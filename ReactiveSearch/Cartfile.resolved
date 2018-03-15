@@ -1,0 +1,3 @@
+github "ReactiveX/RxSwift" "4.1.2"
+github "algolia/algoliasearch-client-swift" "5.1.4"
+github "algolia/instantsearch-core-swift" "3.2.1"

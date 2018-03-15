@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>{{name}} {{kind}} Reference</title>
+
+    {{> head}}
+
+</head>
+
+<body class="index">
+
+    {{> body-header}}
+    {{> body-nav-reference}}
+
+    <div class="container">
+        {{>nav}}
+        <article class="main-content">
+            <section>
+                <section class="section">
+                    {{^hide_name}}<h1>{{name}}</h1>{{/hide_name}}
+                    {{#declaration}}
+                    <div class="declaration">
+                        <div class="language">
+                            {{{declaration}}}
+                        </div>
+                    </div>
+                    {{/declaration}}
+                    {{{overview}}}
+                </section>
+            {{> tasks}}
+            </section>
+        </article>
+    </div>
+
+    {{> body-footer}}
+
+</body>
+
+{{> scripts}}
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>{{title}}</title>
+
+    {{> head}}
+</head>
+
+<body class="index">
+
+    {{> body-header}}
+    {{> body-nav-home}}
+
+    <div class="container homepage">
+        <section class="headline">
+            <h1>InstantSearch Core<br/><small>for</small> Swift <small>and Objective-C</small></h1>
+        </section>
+        <article class="main-content">
+            {{{ contents }}}
+        </article>
+    </div>
+
+    {{> body-footer}}
+
+</body>
+
+{{> scripts}}
+
+</html>
