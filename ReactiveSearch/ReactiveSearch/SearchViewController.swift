@@ -50,10 +50,32 @@ extension Box where A: UITextField {
     references.append(ta)
   }
 }
+private var rsAssociationKey: UInt8 = 0
+
+
+extension UISearchBar {
+  var proxyDelegate: UISearchBarDelegate? {
+    get {
+      return objc_getAssociatedObject(self, &rsAssociationKey) as? UISearchBarDelegate
+    }
+    set(newValue) {
+      objc_setAssociatedObject(self, &rsAssociationKey, newValue, objc_AssociationPolicy.OBJC_ASSOCIATION_ASSIGN)
+    }
+  }
+}
 
 extension Box where A: UISearchBar {
-  func onChange(_ action: @escaping(String?) -> ()) {
+  
+  
+  func onTextDidChange(_ action: @escaping(String?) -> ()) {
     
+  }
+  
+  func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    guard let proxyDelegate = self.unbox.proxyDelegate else {
+      return
+    }
+    proxyDelegate.searchBar?(searchBar, textDidChange: searchText)
   }
 }
 
@@ -80,7 +102,7 @@ class SearchViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     self.navigationItem.titleView = searchBar
-    searchBar.delegate = self
+    //searchBar.delegate = self
     self.tableView.register(UINib.init(nibName: "ItemCell", bundle: nil), forCellReuseIdentifier: "recordCell")
     headerView = SearchHeaderView.loadNib("SearchHeaderView")
     tableView.tableHeaderView = headerView
@@ -92,6 +114,9 @@ class SearchViewController: UITableViewController {
     
     headerViewBox.bind(\.itemsCount, to: searchResults.map { $0.nbHits })
     headerViewBox.bind(\.filtersButton.isEnabled, to: searchResults.map { $0.nbHits > 0 })
+    //    searchBarBox.onTextDidChange { [weak self] newText in
+    //      ReactiveSearch.shared.search(with: newText)
+    //    }
     
     ReactiveSearch.shared.search()
   }
@@ -99,7 +124,7 @@ class SearchViewController: UITableViewController {
 
 extension SearchViewController: UISearchBarDelegate {
   public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-      ReactiveSearch.shared.search(with: searchText)
+    ReactiveSearch.shared.search(with: searchText)
   }
 }
 
@@ -132,3 +157,4 @@ extension SearchViewController {
     searchBar.resignFirstResponder()
   }
 }
+
