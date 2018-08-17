@@ -38,6 +38,10 @@ class ViewController: HitsTableViewController {
         
         return cell
     }
+  
+  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    searchBar.resignFirstResponder()
+  }
     
     func initUI() {
         // Add the declared views to the main view
