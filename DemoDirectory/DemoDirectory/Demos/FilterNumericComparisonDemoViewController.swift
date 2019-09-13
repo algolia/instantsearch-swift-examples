@@ -24,13 +24,15 @@ class FilterNumericComparisonDemoViewController: UIViewController {
 
   let searchStateViewController: SearchStateViewController
 
-  let numericTextFieldController1: NumericTextFieldController
+  let numericTextFieldController1: TextFieldController
   let numericTextFieldController2: NumericTextFieldController
   let numericStepperController: NumericStepperController
 
   let mainStackView = UIStackView(frame: .zero)
   let stepperStackView = UIStackView(frame: .zero)
   let stepperLabel = UILabel()
+
+  let textField = UITextField()
 
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     self.searcher = SingleIndexSearcher(index: .demo(withName:"mobile_demo_filter_numeric_comparison"))
@@ -40,12 +42,11 @@ class FilterNumericComparisonDemoViewController: UIViewController {
     numberInteractor3 = .init()
   
     let stepper = UIStepper()
-    let textField = UITextField()
+
     let textField2 = UITextField()
-    textField.keyboardType = .numberPad
     textField2.keyboardType = .numberPad
 
-    numericTextFieldController1 = NumericTextFieldController(textField: textField)
+    numericTextFieldController1 = TextFieldController(textField: textField)
     numericTextFieldController2 = NumericTextFieldController(textField: textField2)
     numericStepperController = NumericStepperController(stepper: stepper)
 
@@ -73,7 +74,7 @@ private extension FilterNumericComparisonDemoViewController {
     searcher.connectFilterState(filterState)
     
     numberInteractor.connectFilterState(filterState, attribute: yearAttribute, numericOperator: .greaterThanOrEqual)
-    numberInteractor.connectController(numericTextFieldController1)
+    //numberInteractor.connectController(numericTextFieldController1)
     numberInteractor.connectSearcher(searcher, attribute: yearAttribute)
 
     numberInteractor2.connectFilterState(filterState, attribute: yearAttribute, numericOperator: .greaterThanOrEqual)
@@ -101,13 +102,13 @@ private extension FilterNumericComparisonDemoViewController {
     mainStackView.addArrangedSubview(searchStateViewController.view)
     searchStateViewController.view.widthAnchor.constraint(equalTo: mainStackView.widthAnchor, multiplier: 1).isActive = true
 
-    numericTextFieldController1.textField.layer.borderWidth = 1
-    numericTextFieldController1.textField.layer.borderColor = UIColor.gray.cgColor
-    numericTextFieldController1.textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    textField.layer.borderWidth = 1
+    textField.layer.borderColor = UIColor.gray.cgColor
+    textField.heightAnchor.constraint(equalToConstant: 40).isActive = true
 
-    mainStackView.addArrangedSubview(numericTextFieldController1.textField)
+    mainStackView.addArrangedSubview(textField)
 
-    numericTextFieldController1.textField.widthAnchor.constraint(equalTo: mainStackView.widthAnchor, multiplier: 0.4).isActive = true
+    textField.widthAnchor.constraint(equalTo: mainStackView.widthAnchor, multiplier: 0.4).isActive = true
 
     numericTextFieldController2.textField.layer.borderWidth = 1
     numericTextFieldController2.textField.layer.borderColor = UIColor.gray.cgColor

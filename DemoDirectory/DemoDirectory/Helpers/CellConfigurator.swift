@@ -38,9 +38,9 @@ struct MovieHitCellViewState {
         }
       }
       
-      if let highlightedTitles = movieHit.highlightResult?["title"] {
-        cell.titleLabel.attributedText = NSAttributedString(highlightedResults: highlightedTitles, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
-      }
+//      if let highlightedTitles = movieHit.highlightResult?["title"] {
+//        cell.titleLabel.attributedText = NSAttributedString(highlightedResults: highlightedTitles, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
+//      }
 
       cell.genreLabel.text = movie.genre.joined(separator: ", ")
       cell.yearLabel.text = String(movie.year)
@@ -64,9 +64,9 @@ struct ActorHitCollectionViewCellViewState {
   
   func configure(_ cell: ActorCollectionViewCell) -> (Hit<Actor>) -> () {
     return { actorHit in
-      if let highlightedNames = actorHit.highlightResult?["name"] {
-        cell.nameLabel.attributedText = NSAttributedString(highlightedResults: highlightedNames, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
-      }
+//      if let highlightedNames = actorHit.highlightResult?["name"] {
+//        cell.nameLabel.attributedText = NSAttributedString(highlightedResults: highlightedNames, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
+//      }
     }
   }
   
@@ -120,10 +120,10 @@ struct MovieHitCellConfigurator: CellConfigurable {
   static func configure(_ cell: UITableViewCell) -> (Hit<Movie>) -> Void {
     return { movieHit in
       let movie = movieHit.object
-      if let highlightedTitles = movieHit.highlightResult?["title"] {
-        cell.textLabel?.attributedText = NSAttributedString(highlightedResults: highlightedTitles, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
-      }
-      
+//      if let highlightedTitles = movieHit.highlightResult?["title"] {
+//        cell.textLabel?.attributedText = NSAttributedString(highlightedResults: highlightedTitles, separator: NSAttributedString(string: ", "), attributes: [.foregroundColor: UIColor.red])
+//      }
+
       cell.detailTextLabel?.text = movie.genre.joined(separator: ", ")
       cell.imageView?.sd_setImage(with: movie.image, completed: { (_, _, _, _) in
         cell.setNeedsLayout()
